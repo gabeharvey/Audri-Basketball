@@ -5,11 +5,11 @@ const MotionBox = motion.create(Box);
 
 function Academics() {
   const academicAchievements = [
-    "Graduated with Honors from Churchill HS",
+    "Graduated with Honors from Incarnate Word",
     "Dean's List for 8 semesters",
     "Recipient of the Academic Excellence Scholarship",
     "Completed a major in Computer Science with a focus on AI",
-    "Co-Founder of the Women in Tech Club at Churchill HS",
+    "Co-Founder of the Women in Tech Club at Incarnate Word",
     "Volunteered as a mentor for aspiring computer scientists"
   ];
 
