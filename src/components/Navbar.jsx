@@ -87,7 +87,7 @@ const Navbar = () => {
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        fontSize={{ base: '2xl', md: '3xl' }}
+                        fontSize={{ base: '3xl', md: '4xl' }}
                         fontFamily="'Merienda', cursive"
                         color="#20B2AA"
                         letterSpacing="wider"
