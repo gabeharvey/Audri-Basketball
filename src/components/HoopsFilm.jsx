@@ -115,6 +115,21 @@ function HoopsFilm() {
           />
         ))}
       </SimpleGrid>
+      <Box
+        w="100%"
+        h="300px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        bg="transparent"
+        border="none"
+      >
+        <img
+          src="/cowgirl-hat.png"
+          alt="Basketball Net"
+          style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+        />
+      </Box>
     </VStack>
   );
 }

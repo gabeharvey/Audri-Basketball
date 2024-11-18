@@ -20,7 +20,7 @@ function PlayerProfile() {
     name: "Player Bio", 
     bioCategories: [
       { title: "Class", description: "2030" },
-      { title: "Position", description: "PF" },
+      { title: "Position", description: "SG/SF" },
       { title: "Height", description: "5'8\"" },
       { title: "Weight", description: "115 lbs" },
       { title: "Place of Birth", description: "San Antonio, TX" },
@@ -39,32 +39,65 @@ function PlayerProfile() {
       </Heading>
 
       {/* Play Button */}
-      {!isPlaying && (
-        <button
-            onClick={handlePlay}
-            style={{
-                background: 'none', 
-                border: 'none', 
-                cursor: 'pointer', 
-                padding: '0', 
-                display: 'flex', 
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-            >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#F5F5DC" 
-                strokeWidth="2"
-                width="40px" 
-                height="40px"
-            >
-                <polygon points="5,3 19,12 5,21" />
-            </svg>
-            </button>
-      )}
+{/* Play/Pause Button */}
+{isPlaying ? (
+  <button
+    onClick={() => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    }}
+    style={{
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      padding: '0',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#F5F5DC"
+      strokeWidth="2"
+      width="40px"
+      height="40px"
+    >
+      <rect x="6" y="4" width="4" height="16" />
+      <rect x="14" y="4" width="4" height="16" />
+    </svg>
+  </button>
+) : (
+  <button
+    onClick={handlePlay}
+    style={{
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      padding: '0',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#F5F5DC"
+      strokeWidth="2"
+      width="40px"
+      height="40px"
+    >
+      <polygon points="5,3 19,12 5,21" />
+    </svg>
+  </button>
+)}
+
       <audio ref={audioRef} src="rap-1.mp3" preload="auto" />
       <Flex flexDirection="row" flexWrap="wrap" justifyContent="center" alignItems="center">
         <Box
